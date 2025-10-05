@@ -70,6 +70,9 @@ article h3 {
 @media (max-width: 760px) {
   .article-header {
     max-width: 100%;
+    & hr {
+      width: 100%;
+    }
   }
 }
 
