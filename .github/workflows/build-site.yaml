@@ -44,7 +44,7 @@ jobs:
           cd exampleSite
           hugo --themesDir ../.. -d ../docs/ --logLevel info -b https://danielroelfs.github.io/hugo-theme-trysil
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
 
