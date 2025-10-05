@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      HUGO_VERSION: 0.140.2
+      HUGO_VERSION: 0.151.0
 
     steps:
       - name: 🛎 Check out main
@@ -44,7 +44,7 @@ jobs:
           cd exampleSite
           hugo --themesDir ../.. -d ../docs/ --logLevel info -b https://danielroelfs.github.io/hugo-theme-trysil
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
 
