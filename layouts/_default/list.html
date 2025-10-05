@@ -4,20 +4,22 @@
     <h1 class="article-title">{{ .Title }}</h1>
     <hr />
   </div>
-  <div class="posts-lists">
+  <table class="posts-lists">
     {{ range $k, $v := .Pages.ByPublishDate.Reverse }}
-    <div class="index-entry">
-      <a href="{{ .Permalink }}">
-        <div class="post-title">{{ .Title | markdownify }}</div>
-        {{ if .Date }}
-        <div class="post-date">{{ .Date.Format "2 January 2006" }}</div>
-        {{ else }}
-        <div class="post-date">no date</div>
-        {{ end }}
-      </a>
-    </div>
+    <tr class="index-entry">
+      {{ if .Date }}
+      <td class="post-date">
+        <a href="{{ .Permalink }}">{{ .Date.Format "2 January 2006" }}</a>
+      </td>
+      {{ else }}
+      <td class="post-date"><a href="{{ .Permalink }}">no date</a></td>
+      {{ end }}
+      <td class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      </td>
+    </tr>
     {{ end }}
-  </div>
+  </table>
 </article>
 <nav>
   {{ with .Site.Menus.main }} {{ range sort . "Weight" }}
