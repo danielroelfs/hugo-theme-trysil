@@ -200,6 +200,40 @@ mark {
   }
 }
 
+/* Lists */
+ol {
+  counter-reset: item;
+  margin: 0;
+  & li:before {
+    display: block;
+    float: left;
+    content: counter(item);
+    margin-right: 1.15rem;
+  }
+}
+
+ul,
+ol {
+  padding-bottom: 0.5rem;
+}
+
+ol li,
+ul li {
+  counter-increment: item;
+  list-style: none;
+  margin: 0;
+  & p {
+    margin-left: 2.5em;
+  }
+}
+
+ul li:before {
+  display: block;
+  float: left;
+  content: "-";
+  margin-right: 1.15rem;
+}
+
 // Navigation
 
 nav {
@@ -243,7 +277,7 @@ table.posts-lists {
       background-color: rgba($accent-color, 0.2);
     }
     & td {
-      padding: 0.2em 0.4em;
+      padding: 0.3em 0.4em;
       & a {
         display: block;
         text-decoration: none;
