@@ -1,5 +1,5 @@
 ---
-title: "First post"
+title: "First Post"
 description: "Lorem ipsum dolor sit amet"
 date: 2025-10-01
 ---

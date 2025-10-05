@@ -237,17 +237,13 @@ table.posts-lists {
   border-bottom: none;
   width: $p-width;
   & tr.index-entry {
-    text-decoration: none;
     transition: all 0.2s;
-    padding: 10px;
     border-radius: 5px;
-    &:not(:last-child) {
-      margin-bottom: 2px;
-    }
     &:hover {
       background-color: rgba($accent-color, 0.2);
     }
     & td {
+      padding: 0.2em 0.4em;
       & a {
         display: block;
         text-decoration: none;
@@ -260,7 +256,7 @@ table.posts-lists {
       }
       &.post-title {
         text-align: left;
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         font-weight: bold;
       }
     }

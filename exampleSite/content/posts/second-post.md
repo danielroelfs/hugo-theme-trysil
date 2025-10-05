@@ -1,5 +1,5 @@
 ---
-title: "Second post"
+title: "Second Post"
 description: "The second post"
 date: 2025-10-02
 ---
