@@ -1,0 +1,55 @@
+baseURL = "http://localhost:1314/"
+languageCode = 'en-us'
+title = 'Trysil'
+theme = "hugo-theme-trysil"
+
+[params]
+  intro = "A simple and minimalist Hugo theme that focuses on typography and legibility. Please explore this demo to see the design elements and features included."   # short introduction on the home page
+
+  description = "A long-form content oriented Hugo theme"
+
+  highlightstyle_light  = "routeros" # Style for highlight.js in light mode
+  highlightstyle_dark  = "rainbow" # Style for highlight.js in dark mode
+
+  iconsource  = "tabler" # source of the icon font (defaults to tabler, options: tabler, feather, simple-icons)
+
+  [[params.social]]
+    url     = "https://github.com"  # link to your page
+    icon    = "brand-github"        # name of the icon to use, see feathericons.com for the full list
+    weight  = 1
+  [[params.social]]
+    url     = "https://linkedin.com/"
+    icon    = "brand-linkedin"
+    weight  = 2
+  [[params.social]]
+    url     = "https://bsky.com/"
+    icon    = "brand-bluesky"
+    weight  = 2
+  [[params.social]]
+    url     = "mailto:youremail@email.com"
+    icon    = "at"
+    weight  = 3
+  [[params.social]]
+    url     = "https://mastodon.social/"
+    icon    = "brand-mastodon"
+    weight  = 4
+    html_attributes = "rel=\"me\""  # add rel attribute for Mastodon profile link verification
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url  = "/posts"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4

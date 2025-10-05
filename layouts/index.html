@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="content-container">
+  <main>
+    <div class="index">
+      <h1 class="index-title">{{ .Title | markdownify }}</h1>
+      <p class="index-intro">{{ .Site.Params.intro | markdownify }}</p>
+      <div class="social-list">
+        {{ if eq .Site.Params.iconsource "feather" }} {{ with
+        .Site.Params.social }} {{ range sort . "weight" }}
+        <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
+          <i
+            class="feather-icon"
+            data-feather="{{ .icon }}"
+            height="20"
+            width="20"
+          ></i>
+        </a>
+        {{ end }} {{ end }} {{ else if eq .Site.Params.iconsource "simple-icons"
+        }} {{ with .Site.Params.social }} {{ range sort . "weight" }}
+        <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
+          <img
+            height="20"
+            width="20"
+            src="https://cdn.simpleicons.org/{{ .icon }}/444"
+          />
+        </a>
+        {{ end }} {{ end }} {{ else }} {{ with .Site.Params.social }} {{ range
+        sort . "weight" }}
+        <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
+          <i class="ti ti-{{ .icon }}"></i>
+        </a>
+        {{ end }} {{ end }} {{ end }}
+      </div>
+      <div class="nav-block">
+        <nav class="index-nav">
+          {{ with .Site.Menus.main }} {{ range sort . "Weight" }}
+          <a href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }} {{ $text }}
+          </a>
+          {{ end }} {{ end }}
+        </nav>
+      </div>
+    </div>
+  </main>
+</div>
+{{ end }}

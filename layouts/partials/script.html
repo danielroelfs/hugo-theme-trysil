@@ -1,0 +1,22 @@
+<!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<link
+  rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/routeros.min.css"
+/>
+<script>
+  hljs.highlightAll();
+</script>
+
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+
+{{ if or (eq .Site.Params.iconsource "tabler") (not .Site.Params.iconsource) }}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+/>
+{{ end }}

@@ -1,0 +1,28 @@
+// Variables
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"); // Fraunces
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"); // Crimson Text
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"); // Courier Prime
+
+// Greyscale
+$background-color: #fffff8;
+$foreground-color: #111111;
+$accent-color: #97266f;
+$shade-color: lightgrey;
+
+// Purple
+//$background-color: #f4effb;
+//$foreground-color: #6a4997;
+//$shade-color: #c8bade;
+
+$main-family: "Crimson Text", "Palatino", "Georgia", serif;
+$header-family: "TangoSans", "Fraunces", "Palatino", "Georgia", serif;
+$mono-family: "Courier Prime", "Courier", monospace;
+$sans-family: system-ui, "Helvetica", sans-serif;
+
+$header-weight: 900;
+
+$main-width: 75%;
+$p-width: 62.5%;
+$sidenote-margin: -60%;
+$sidenote-width: 50%;

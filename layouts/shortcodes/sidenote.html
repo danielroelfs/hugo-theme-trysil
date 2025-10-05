@@ -1,0 +1,11 @@
+<label
+  for={{ .Get "for" | markdownify }}
+  class="margin-toggle sidenote-number"
+>
+</label>
+<input
+  type="checkbox"
+  id={{ .Get "for" | markdownify }}
+  class="margin-toggle"
+/>
+<span class="sidenote">{{ .Inner | markdownify }}</span>

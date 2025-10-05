@@ -1,0 +1,12 @@
+<label
+  for={{ .Get "for" | markdownify }}
+  class="margin-toggle"
+>
+  &#8853;
+</label>
+<input
+  type="checkbox"
+  id={{ .Get "for" | markdownify }}
+  class="margin-toggle"
+/>
+<span class="marginnote">{{ .Inner | markdownify }}</span>

@@ -1,0 +1,266 @@
+// Custom styling
+
+@import "variables";
+
+// Blocks
+
+body {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+@media (max-width: 760px) {
+  .index {
+    width: 100%;
+  }
+}
+
+// Headers
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-family;
+}
+
+article h1,
+article h2,
+article h3 {
+  font-weight: bold;
+}
+
+article h1 {
+  font-size: 2.2rem;
+  &.article-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+}
+
+article h2 {
+  font-size: 1.6rem;
+}
+
+article h3 {
+  font-size: 1.2rem;
+}
+
+.article-header {
+  max-width: 100%;
+  & .subheader {
+    font-size: 1.1rem;
+  }
+  & hr {
+    width: $p-width;
+  }
+}
+
+@media (max-width: 760px) {
+  .article-header {
+    max-width: 100%;
+  }
+}
+
+h1.index-title {
+  font-size: 4rem;
+  font-weight: $header-weight;
+  font-style: italic;
+  letter-spacing: -2px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  h1.index-title {
+    font-size: 3rem;
+  }
+}
+
+// Misc
+
+table {
+  border-collapse: collapse;
+  border-bottom: 1px solid $foreground-color;
+  min-width: 20%;
+  width: auto;
+  max-width: $main-width;
+  th {
+    border-bottom: 1px solid $foreground-color;
+  }
+  td {
+    padding: 0.4em;
+    text-align: center;
+  }
+}
+
+a {
+  text-decoration-style: dashed;
+  text-decoration-color: $accent-color !important;
+  &.xref {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    & .xref-text {
+      font-weight: bolder;
+      padding-top: 2px;
+    }
+  }
+}
+
+.hcenter {
+  text-align: center;
+}
+
+.ornament {
+  font-size: 2rem;
+}
+
+figcaption {
+  width: 100%;
+  max-width: 100%;
+  & > p {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.standout-paragraph {
+  width: calc(#{$p-width} - 3rem);
+  border-radius: 5px;
+  background-color: rgba($accent-color, 0.2);
+  padding: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .standout-paragraph {
+    width: calc(100% - 3rem);
+  }
+}
+
+pre code.hljs {
+  width: 100%;
+}
+
+p:has(img:only-child) {
+  & img {
+    max-width: 160%;
+  }
+  & .sidenote,
+  & .marginnote {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+kbd {
+  font-size: 75%;
+  border-radius: 3px;
+  border: 1px solid $foreground-color;
+  padding: 1px 2px;
+}
+
+mark {
+  background-color: rgba(166, 140, 145, 0.25);
+}
+
+.gap {
+  width: 100%;
+}
+
+.social-list {
+  & a {
+    font-size: 1.5rem;
+    transition: color 0.2s;
+    text-decoration: none;
+    & .feather-icon {
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      color: $accent-color;
+      opacity: 0.6;
+    }
+  }
+}
+
+// Navigation
+
+nav {
+  font-size: 1.4rem;
+  border-top: 1px dashed $foreground-color;
+  padding-top: 1rem;
+  margin: 2rem 0 2.5rem 0;
+  text-align: right;
+  & > a {
+    display: block;
+    padding: 2px 6px;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: all 0.2s;
+    border-radius: 5px;
+    &:hover {
+      background-color: rgba($accent-color, 0.2);
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  nav {
+    width: 100%;
+    font-size: 1.6rem;
+    & > a {
+      padding: 6px;
+    }
+  }
+}
+
+// Posts index
+
+.posts-lists {
+  width: $main-width;
+  & hr {
+    width: 100%;
+  }
+  & .index-entry {
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 10px;
+    border-radius: 5px;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+    &:hover {
+      background-color: rgba($accent-color, 0.2);
+    }
+    & a {
+      text-decoration: none;
+      & .post-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      & .post-date {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .posts-lists {
+    max-width: 100%;
+  }
+}
