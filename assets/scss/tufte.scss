@@ -86,8 +86,8 @@ table {
 dl,
 ol,
 ul {
-  width: 50%;
-  -webkit-padding-start: 5%;
+  width: 95%; // ET recommends 50%
+  -webkit-padding-start: 2%; // ET recommends 5%
 }
 
 @media (max-width: 760px) {
