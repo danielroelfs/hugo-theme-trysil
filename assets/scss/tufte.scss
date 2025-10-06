@@ -11,7 +11,7 @@ html {
 
 @media (max-width: 760px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -23,7 +23,7 @@ body {
   font-family: $main-family;
   background-color: $background-color;
   color: $foreground-color;
-  max-width: 1200px;
+  max-width: 1050px;
   counter-reset: sidenote-counter;
 }
 
@@ -306,7 +306,7 @@ figcaption {
 // Code blocks
 
 pre {
-  max-width: $p-width; // ET doesn't specify
+  max-width: calc(100% - 2.5%); // ET doesn't specify
 }
 
 @media (max-width: 760px) {
