@@ -32,6 +32,11 @@
   />
   {{ end }}
 
+  <!-- Umami -->
+  {{ if and .Site.Params.umami (not .Site.IsServer) }}
+    <script async src="{{ .Site.Params.umamilink }}" data-website-id="{{ .Site.Params.umamiid }}"></script>
+  {{ end }}
+
   <!-- Favicon -->
   {{ if .Site.Params.favicon }} {{ with .Site.Params.favicon }}
   <link rel="shortcut icon" href="{{ . | relURL }}" />
