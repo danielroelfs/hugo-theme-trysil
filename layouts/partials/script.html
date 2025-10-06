@@ -8,6 +8,16 @@
   hljs.highlightAll();
 </script>
 
+<!-- Math syntax -->
+<script>
+  MathJax = {
+      tex: {
+        inlineMath: [ ['$','$'] ]
+      }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+
 <!-- Icons -->
 {{ if eq .Site.Params.iconsource "feather" }}
 <script src="https://unpkg.com/feather-icons"></script>
