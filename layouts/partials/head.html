@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
   <!-- Custom css -->
-  {{ range .Site.Params.customcss }} {{ $style := resources.Get . }}
+  {{ range .Site.Params.customcss }} {{ $style := resources.Get . | toCSS }}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
