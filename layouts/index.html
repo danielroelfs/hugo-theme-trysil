@@ -26,7 +26,7 @@
         </a>
         {{ end }} {{ end }} {{ else }} {{ with .Site.Params.social }} {{ range
         sort . "weight" }}
-        <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
+        <a href="{{ .url }}" aria-label='Go to {{ replace .url "https://" ""  }}' {{ .html_attributes | safeHTMLAttr }}>
           <i class="ti ti-{{ .icon }}"></i>
         </a>
         {{ end }} {{ end }} {{ end }}
@@ -34,7 +34,7 @@
       <div class="nav-block">
         <nav class="index-nav">
           {{ with .Site.Menus.main }} {{ range sort . "Weight" }}
-          <a href="{{ .URL }}">
+          <a href="{{ .URL }}" aria-label="Go to {{ .URL }}">
             {{ $text := print .Name | safeHTML }} {{ $text }}
           </a>
           {{ end }} {{ end }}
