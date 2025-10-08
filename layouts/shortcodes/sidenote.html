@@ -1,6 +1,5 @@
-{{ $seed := .Site.Title }}
-{{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
-
+{{- $seed := .Site.Title -}}
+{{- $random := delimit (shuffle (split (md5 $seed) "" )) "" -}}
 <label
   for="sn-{{ $random }}"
   class="margin-toggle sidenote-number"
