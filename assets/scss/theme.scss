@@ -207,6 +207,10 @@ p.index-intro {
   }
 }
 
+::selection {
+  background-color: rgba($accent-color, 0.2);
+}
+
 /* Lists */
 ol {
   counter-reset: item;
