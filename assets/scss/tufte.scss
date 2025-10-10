@@ -233,7 +233,7 @@ blockquote {
 
 dt:not(:first-child),
 li:not(:first-child) {
-  margin-top: 0.25rem;
+  margin-top: initial; // ET recommends 0.25rem
 }
 
 .iframe-wrapper {
