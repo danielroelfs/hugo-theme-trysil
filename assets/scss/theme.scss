@@ -121,7 +121,7 @@ a {
       padding-top: 2px;
     }
   }
-  article > p > & {
+  article & {
     transition: color 0.2s;
     &:hover {
       color: $accent-color;
