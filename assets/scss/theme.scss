@@ -194,9 +194,13 @@ details summary {
   width: 100%;
 }
 
+p.index-intro {
+  margin-bottom: 0;
+}
+
 .social-list {
   & a {
-    font-size: 1.5rem;
+    font-size: 3rem;
     transition: color 0.2s;
     text-decoration: none;
     & .feather-icon {
