@@ -64,6 +64,9 @@ h3 {
     & .article-info {
       font-size: 1.1rem;
     }
+    & .top-nav {
+      float: right;
+    }
   }
   & hr {
     width: $p-width;
@@ -117,6 +120,21 @@ a {
       font-weight: bolder;
       padding-top: 2px;
     }
+  }
+  article > p > & {
+    transition: color 0.2s;
+    &:hover {
+      color: $accent-color;
+      opacity: 0.6;
+    }
+  }
+}
+
+.top-nav > a {
+  transition: color 0.2s;
+  &:hover {
+    color: $accent-color;
+    opacity: 0.6;
   }
 }
 
