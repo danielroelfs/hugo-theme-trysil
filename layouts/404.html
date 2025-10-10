@@ -1,14 +1,15 @@
 {{ define "main" }}
+{{ if .Site.Params.show_breadcrumbs }}
+  <nav class="breadcrumbs">
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Params.home_name }}</a>
+  </nav>
+{{ end }}
 <div class="content-container">
-  <a href="/" class="xref">
-    <i data-feather="arrow-left" width="18" height="18"></i
-    ><span class="xref-text">back to home</span>
-  </a>
   <main>
     <div class="index">
       <h1 class="index-title">{{ .Title | markdownify }}</h1>
       <div class="nav-block">
-        <nav class="index-nav">
+        <nav class="bottom-nav">
           {{ with .Site.Menus.main }} {{ range sort . "Weight" }}
           <a href="{{ .URL }}">
             {{ $text := print .Name | safeHTML }} {{ $text }}

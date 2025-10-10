@@ -64,7 +64,7 @@ h3 {
     & .article-info {
       font-size: 1.1rem;
     }
-    & .top-nav {
+    & .subheader-nav {
       float: right;
     }
   }
@@ -130,7 +130,7 @@ a {
   }
 }
 
-.top-nav > a {
+.subheader-nav > a {
   transition: color 0.2s;
   &:hover {
     color: $accent-color;
@@ -265,7 +265,7 @@ ul li:before {
 
 // Navigation
 
-nav {
+nav.bottom-nav {
   font-size: 1.4rem;
   border-top: 1px dashed $foreground-color;
   padding-top: 1rem;
@@ -285,11 +285,24 @@ nav {
 }
 
 @media (max-width: 760px) {
-  nav {
+  nav.bottom-nav {
     width: 100%;
     font-size: 1.6rem;
     & > a {
       padding: 6px;
+    }
+  }
+}
+
+nav.breadcrumbs {
+  border-top: none;
+  margin: 0;
+  padding: 0;
+  & > a {
+    transition: color 0.2s;
+    &:hover {
+      color: $accent-color;
+      opacity: 0.6;
     }
   }
 }

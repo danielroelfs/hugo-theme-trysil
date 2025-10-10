@@ -7,6 +7,8 @@ theme = "hugo-theme-trysil"
   intro = "A simple and minimalist Hugo theme that focuses on typography and legibility. Please explore this demo to see the design elements and features included."   # short introduction on the home page
 
   description = "A long-form content oriented Hugo theme"
+  show_breadcrumbs = true
+  home_name = "Home"
 
   highlightstyle_light  = "routeros" # Style for highlight.js in light mode
   highlightstyle_dark  = "rainbow" # Style for highlight.js in dark mode
