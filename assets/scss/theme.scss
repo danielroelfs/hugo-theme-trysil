@@ -112,7 +112,7 @@ table {
 
 a {
   text-decoration-style: dashed;
-  text-decoration-color: $accent-color !important;
+  text-decoration-color: $accent-color;
   &.xref {
     text-decoration: none;
     align-items: center;
@@ -310,6 +310,10 @@ table.posts-lists {
       & a {
         display: block;
         text-decoration: none;
+        &:hover {
+          color: $foreground-color;
+          opacity: initial;
+        }
       }
       &.post-date {
         font-size: 0.9rem;
