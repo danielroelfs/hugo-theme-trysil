@@ -22,10 +22,10 @@
           <span>by {{ .Params.author }}</span>
         {{ end }}
       </span>
-      {{ if not .Params.hidetopnav | default false }}
-      <span class="subheader-nav">
-        <a href="../">back to previous page</a>
-      </span>
+      {{ if .Site.Params.show_subheader_nav }}
+        <span class="subheader-nav">
+          <a href="../">back to previous page</a>
+        </span>
       {{ end }}
     </div>
     <hr />
@@ -33,10 +33,12 @@
   {{ .Content }}
 </article>
 <nav class="bottom-nav">
-  {{ with .Site.Menus.main }} {{ range sort . "Weight" }}
-  <a class="internal" hyphens="none" href="{{ .URL }}">
-    {{ $text := print .Name | safeHTML }} {{ $text }}
-  </a>
-  {{ end }} {{ end }}
+  {{ with .Site.Menus.main }}
+    {{ range sort . "Weight" }}
+      <a class="internal" hyphens="none" href="{{ .URL }}">
+        {{ $text := print .Name | safeHTML }} {{ $text }}
+      </a>
+    {{ end }}
+  {{ end }}
 </nav>
 {{ end }}
