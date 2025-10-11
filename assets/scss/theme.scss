@@ -276,7 +276,7 @@ nav.bottom-nav {
     padding: 2px 6px;
     text-transform: lowercase;
     text-decoration: none;
-    transition: all 0.2s;
+    transition: background-color 0.2s ease;
     border-radius: 5px;
     &:hover {
       background-color: rgba($accent-color, 0.2);
@@ -313,7 +313,7 @@ table.posts-lists {
   border-bottom: none;
   width: $p-width;
   & tr.index-entry {
-    transition: all 0.2s;
+    transition: background-color 0.2s ease;
     border-radius: 5px;
     &:hover {
       background-color: rgba($accent-color, 0.2);
