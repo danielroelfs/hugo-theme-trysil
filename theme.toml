@@ -5,7 +5,7 @@ description = "A simple Hugo theme focused on readability"
 homepage = "https://github.com/danielroelfs/hugo-theme-trysil"
 tags = ["clean", "simple", "minimalist", "trysil", ]
 features = ["readability", "simple"]
-min_version = "0.115.4"
+min_version = "0.120.0"
 
 [author]
   name = "Daniel Roelfs"

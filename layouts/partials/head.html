@@ -24,23 +24,26 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
   <!-- Custom css -->
-  {{ range .Site.Params.customcss }} {{ $style := resources.Get . | toCSS }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-  />
+  {{ range .Site.Params.customcss }}
+    {{ $style := resources.Get . | toCSS }}
+    <link
+      rel="stylesheet"
+      href="{{ $style.RelPermalink }}"
+      integrity="{{ $style.Data.Integrity }}"
+    />
   {{ end }}
 
   <!-- Umami -->
-  {{ if and .Site.Params.umami (not .Site.IsServer) }}
+  {{ if and .Site.Params.umami (not hugo.IsServer) }}
     <script async src="{{ .Site.Params.umamilink }}" data-website-id="{{ .Site.Params.umamiid }}"></script>
   {{ end }}
 
   <!-- Favicon -->
-  {{ if .Site.Params.favicon }} {{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ . | relURL }}" />
-  {{ end }} {{ end }}
+  {{ if .Site.Params.favicon }}
+    {{ with .Site.Params.favicon }}
+      <link rel="shortcut icon" href="{{ . | relURL }}" />
+    {{ end }}
+  {{ end }}
 
   <!-- Title -->
   {{ $title := print .Title " | " .Site.Title }} {{ if .IsHome }}{{ $title =

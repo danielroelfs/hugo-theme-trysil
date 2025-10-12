@@ -16,6 +16,10 @@ theme = "hugo-theme-trysil"
 
   iconsource  = "tabler" # source of the icon font (defaults to tabler, options: tabler, feather, simple-icons)
 
+  umami       = true
+  umamilink   = "https://example-link.io/script.js"
+  umamiid     = "1234-5678-8900"
+
   [[params.social]]
     url     = "https://github.com"  # link to your page
     icon    = "brand-github"        # name of the icon to use, see feathericons.com for the full list
