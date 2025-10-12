@@ -314,7 +314,6 @@ table.posts-lists {
   width: $p-width;
   & tr.index-entry {
     transition: background-color 0.2s ease;
-    border-radius: 5px;
     &:hover {
       background-color: rgba($accent-color, 0.2);
     }
@@ -333,11 +332,13 @@ table.posts-lists {
         text-align: right;
         width: 1%;
         white-space: nowrap;
+        border-radius: 5px 0 0 5px;
       }
       &.post-title {
         text-align: left;
         font-size: 1.25rem;
         font-weight: bold;
+        border-radius: 0 5px 5px 0;
       }
     }
   }
