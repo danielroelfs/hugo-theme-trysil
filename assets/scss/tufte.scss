@@ -9,7 +9,7 @@ html {
   font-size: 16px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   html {
     font-size: 14px;
   }
@@ -27,7 +27,7 @@ body {
   counter-reset: sidenote-counter;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   body {
     width: 88%; // ET recommends 84%
     padding-left: 6%; // ET recommends 8%
@@ -74,7 +74,7 @@ table {
   width: $p-width;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   p,
   footer,
   table {
@@ -90,7 +90,7 @@ ul {
   -webkit-padding-start: 2%; // ET recommends 5%
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   dl,
   ol,
   ul {
@@ -176,7 +176,7 @@ div.table-wrapper {
   font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   div.table-wrapper,
   table {
     width: 85%;
@@ -194,7 +194,7 @@ hr {
   padding: 0;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   hr {
     width: 100%;
   }
@@ -220,7 +220,7 @@ blockquote {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   blockquote {
     margin-left: 1.5em;
     margin-right: 0em;
@@ -256,7 +256,7 @@ img {
   max-width: 100%;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   img {
     width: 100%;
   }
@@ -277,7 +277,7 @@ figure {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   figure {
     max-width: 100%; // ET recommends 90%
   }
@@ -295,7 +295,7 @@ figcaption {
   max-width: 40%;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   figcaption,
   figure.fullwidth figcaption {
     margin-right: 0%;
@@ -309,7 +309,7 @@ pre {
   max-width: calc(100% - 2.5%); // ET doesn't specify
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   pre {
     max-width: calc(100% - 5%); // ET doesn't specify
   }
@@ -332,7 +332,7 @@ pre > code {
   display: block;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   pre > code {
     width: 97%;
   }
@@ -404,7 +404,7 @@ label.margin-toggle:not(.sidenote-number) {
   display: none;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
   }
@@ -455,7 +455,7 @@ div.epigraph {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   div.epigraph {
     & > blockquote {
       & > footer {
