@@ -47,6 +47,19 @@ h1 {
     font-weight: 900;
     letter-spacing: -2px;
   }
+  &.index-title {
+    font-size: 4rem;
+    font-weight: $header-weight;
+    font-style: italic;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-height: 480px) {
+  h1.index-title {
+    margin-top: 10rem;
+  }
 }
 
 h2 {
@@ -83,14 +96,6 @@ h3 {
       width: 100%;
     }
   }
-}
-
-h1.index-title {
-  font-size: 4rem;
-  font-weight: $header-weight;
-  font-style: italic;
-  letter-spacing: -2px;
-  margin-bottom: 0;
 }
 
 // Misc
@@ -210,6 +215,12 @@ p.index-intro {
   margin-bottom: 0;
 }
 
+@media (max-height: 480px) {
+  p.index-intro {
+    width: 100%;
+  }
+}
+
 .social-list {
   & a {
     font-size: 3rem;
@@ -295,6 +306,7 @@ nav.bottom-nav {
 }
 
 nav.breadcrumbs {
+  font-size: 1rem;
   border-top: none;
   margin: 0;
   padding: 0;
@@ -304,6 +316,12 @@ nav.breadcrumbs {
       color: $accent-color;
       opacity: 0.6;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  nav.breadcrumbs {
+    font-size: 1.2rem;
   }
 }
 
