@@ -4,6 +4,10 @@
 
 // Blocks
 
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
 body {
   font-size-adjust: ex-height 0.4;
   overflow-wrap: break-word;
